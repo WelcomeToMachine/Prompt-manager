@@ -30,13 +30,12 @@ Ps : If you have defined specific parameters in the clicked prompt, a dialog box
 
 # Environnement of the project
 Vite + Vue 3.5 + TypeScript + Tailwindcss 4.0 + vue-i18n v10
-<img src="https://github.com/WelcomeToMachine/Prompt-manager/tree/main/logos/vite.logo.svg"  width="54" height="54">
+<br />
 ![vite](/logos/vite.logo.png)   
-![vite](/logos/vite.logo.svg)   
-![vue](/logos/vue.logo.svg)
-![tailwindcss](/logos/tailwindcss.logo.svg)
-![typescript](/logos/typescript.logo.2020.svg)
-![vue-i18n](/logos/vue-i18n.logo.svg)
+![vue](/logos/vue.logo.png)
+![tailwindcss](/logos/tailwindcss.logo.png)
+![typescript](/logos/typescript.logo.2020.png)
+![vue-i18n](/logos/vue-i18n.logo.png)
 
 # Download and install
 
