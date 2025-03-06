@@ -1,0 +1,70 @@
+{
+  "_comment" : "conventions _l = label, _b = button, _t = texte, _p = placeholder",
+
+
+  "settings_page": {
+    "language_l": "Langue",
+    "theme_l": "Theme",
+    "import_l": "Import",
+    "import_b": "Importer",
+    "import_modal_title_t": "Importer les prompts et les catégories ?",
+    "import_modal_text_t": "Cette opération va supprimer tous les prompts et catégories actuels. Cette opération est définitive.",
+    "import_success_t": "Fait! Import réalisé avec succès.",
+    "import_error_prefix": "Echec.",
+    "import_error_format_global_t": "Format de données non valide : un objet avec des tableaux d'invites et de catégories était attendu.",
+    "import_error_format_arrays_t": "Format de données non valide : les invites et les catégories doivent être des tableaux.",
+    "import_error_format_prompts_t": "Format de données non valide : chaque invite doit avoir des propriétés de nom, de description, de texte et de catégorie de type chaîne.",
+    "export_l": "Export",
+    "export_b": "Exporter",
+    "export_success_t": "Fait! Export réalisé avec succès.",
+    "erase_l": "Effacer la toutes les données",
+    "erase_b": "Effacer",
+    "erase_warning_t": "Attention : Cette action va effacer tous les prompts et catégories!",
+    "erase_modal_title_t": "Effacer tous les prompts et catégories?",
+    "erase_modal_text_t": "Cette opération est définitive.",
+    "close_b": "Fermer"
+  },
+  "global": {
+    "cancel_b": "Annuler",
+    "add_b": "Ajouter",  
+    "modify_b": "Modifier"
+  },
+  "warning_modal": {
+    "ok_b": "Oui, je suis sûr",
+    "cancel_b": "Annuler"
+  },
+  "index_page": {
+    "filter_p": "filtrer par le nom du prompt",
+    "root_category_name_l": "Toutes les catégories",
+    "delete_category_modal_title_t": "Supprimer cette catégorie?",
+    "delete_category_modal_text_t": "Cette opération est définitive.",
+    "delete_prompt_modal_title_t": "Supprimer ce prompt?",
+    "delete_prompt_modal_text_t": "Cette opération est définitive.",
+    "prompt_tooltip_t": "Ajouter un prompt",
+    "category_tooltip_t": "Ajouter une catégorie",
+    "settings_tooltip_t": "Paramètres"
+  },
+  "prompt_page": {
+    "name_l": "Nom",
+    "name_p": "Nom du prompt",
+    "description_l": "Description",
+    "description_p": "Courte description du prompt",
+    "text_l": "Texte du prompt",
+    "text_p": "Votre prompt.\nUtilisez les accolades {'{{ }}'} pour désigner un paramètre.\nEx : Je m'appelle {'{{name}}'}. Je suis {'{{adjectif}}'}.",
+    "category_l": "Catégorie",
+    "check_error_text_t": "Le texte du prompt ne doit pas être vide.",
+    "check_error_name_t": "Le nom du prompt ne doit pas être vide.",
+    "check_error_exist_t": "le nom du prompt existe déjà."
+  },
+  "category_page": {
+    "name_l": "Nom",
+    "name_p": "Nom de la catégorie",
+    "check_error_name_t": "Le nom de la catégorie ne doit pas être vide.",
+    "check_error_exist_t": "le nom de cette catégorie existe déjà."
+  },
+  "prompt_params_page": {
+    "parameters_l": "Paramètres du prompt",
+    "done_params_b": "Valider",
+    "show_prompt_t": "Afficher le prompt"
+  }
+}

@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+html {
+/* max value for the width and height of a chrome extesion*/
+    width: 775px;
+    height: 585px;
+}
+/*
+p {
+    white-space: pre-line;
+}
+*/
+.my-warning-button {
+    @apply rounded-lg px-3 py-2 bg-red-600 text-sm font-semibold text-white ring-1 shadow-xs shadow-xs ring-red-600 ring-inset hover:bg-red-500;
+}
+.my-normal-buttonn {
+    @apply rounded-lg px-3 py-2 bg-gray-200 dark:bg-gray-600 text-sm font-semibold text-gray-900 dark:text-gray-200 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-300 dark:hover:bg-gray-700;
+}
+.my-action-button {
+    @apply rounded-lg px-3 py-2 bg-sky-600 text-sm font-semibold text-white ring-1 shadow-xs ring-sky-700 ring-inset hover:bg-sky-500;
+}
+.my-select {
+    @apply rounded-lg p-1 bg-gray-50 dark:bg-gray-800 text-sm text-gray-600 dark:text-gray-300 border-gray-300 dark:border-white;
+}
+.my-input {
+    @apply rounded-lg p-1 bg-gray-50 dark:bg-gray-800 text-sm text-gray-600 dark:text-gray-300 border-gray-300 dark:border-white border;
+}
+.my-cancel-button {
+    @apply rounded-lg px-3 py-2 bg-white dark:bg-gray-900 text-sm font-semibold text-gray-900 dark:text-white ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-200 dark:hover:bg-gray-600 ;
+}
+.my-field-label {
+    @apply py-2 text-left text-base text-gray-900 dark:text-white;
+}
+.my-text-area {
+    @apply rounded-lg p-1 bg-gray-50 dark:bg-gray-800 text-sm text-gray-600 dark:text-gray-300 border-gray-300 dark:border-white;
+}
+
+.my-text-gray {
+    @apply text-gray-900 dark:text-gray-200;
+}
+
+.my-text-sm-error {
+    @apply text-sm font-medium text-red-700 dark:text-red-500;
+}
+
+.my-text-sm-success {
+    @apply text-sm font-medium text-green-600 dark:text-green-500;
+}
+
+.my-bg-white {
+    @apply bg-white dark:bg-gray-900;
+}
+
+.my-bg-modal-bg {
+    @apply bg-black/[.5];
+}
+
+.my-prompt-elem {
+    @apply rounded-lg my-1 p-2 bg-gray-200 dark:bg-gray-500 cursor-pointer hover:bg-gray-300 dark:hover:bg-white/5;
+}
+
+.my-prompt-elem-icon-bg {
+    @apply rounded-lg py-1 pr-2 pl-2 mx-0.5 hover:bg-gray-200 dark:hover:bg-gray-500;
+}
+
+.my-category-elem {
+    @apply rounded-lg p-1 bg-gray-300 dark:bg-gray-500 cursor-pointer;
+}
+
+.my-category-elem-icon-bg {
+    @apply rounded-lg py-1 pr-2 pl-1 mx-0.5 hover:bg-gray-200 dark:hover:bg-gray-400;
+}
+
+.my-elem-icon {
+    @apply h-6 w-6 stroke-gray-800 dark:stroke-gray-200;
+}

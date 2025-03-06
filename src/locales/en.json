@@ -1,0 +1,70 @@
+{
+  "_comment" : "conventions _l = label, _b = button, _t = texte, _p = placeholder",
+
+
+  "settings_page": {
+    "language_l": "Language",
+    "theme_l": "Theme",
+    "import_l": "Import",
+    "import_b": "Import",
+    "import_modal_title_t": "Import the prompts and categories?",
+    "import_modal_text_t": "This operation will delete all previous promtps and categories before. This operation is definitive.",
+    "import_success_t": "Done! Import completed successfully.",
+    "import_error_prefix": "Failed.",
+    "import_error_format_global_t": "Invalid data format: expecting an object with prompts and categories arrays.",
+    "import_error_format_arrays_t": "Invalid data format: prompts and categories must be arrays.",
+    "import_error_format_prompts_t": "Invalid data format: each prompt must have name, description, text and category properties of type string.",
+    "export_l": "Export",
+    "export_b": "Export",
+    "export_success_t": "Done! Export completed successfully.",
+    "erase_l": "Clear all the datas",
+    "erase_b": "Erase",
+    "erase_warning_t": "Warning : This action will permanently delete all the categories and prompts!",
+    "erase_modal_title_t": "Erase all prompts and categories?",
+    "erase_modal_text_t": "This operation is definitive.",
+    "close_b": "Close"
+  },
+  "global": {
+    "cancel_b": "Cancel",
+    "add_b": "Add",  
+    "modify_b": "Modify"
+  },
+  "warning_modal": {
+    "ok_b": "Yes, I'm sure",
+    "cancel_b": "Cancel"
+  },
+  "index_page": {
+    "filter_p": "filter by the prompt name",
+    "root_category_name_l": "All categories",
+    "delete_category_modal_title_t": "Delete the category?",
+    "delete_category_modal_text_t": "This operation is definitive.",
+    "delete_prompt_modal_title_t": "Delete the prompt?",
+    "delete_prompt_modal_text_t": "This operation is definitive.",
+    "prompt_tooltip_t": "Add Prompt",
+    "category_tooltip_t": "Add Category",
+    "settings_tooltip_t": "Settings"
+  },
+  "prompt_page": {
+    "name_l": "Name",
+    "name_p": "Name of the prompt",
+    "description_l": "Description",
+    "description_p": "Short description of the prompt",
+    "text_l": "Text of the prompt",
+    "text_p": "Your prompt here.\nUse curly brackets {'{{ }}'} to denote a parameter.\nEx: My name is {'{{name}}'}. I am {'{{adjective}}'}.",
+    "category_l": "Category",
+    "check_error_text_t": "The prompt text must not be empty.",
+    "check_error_name_t": "The prompt name must not be empty.",
+    "check_error_exist_t": "The prompt name already exists."
+  },
+  "category_page": {
+    "name_l": "Name",
+    "name_p": "Category name",
+    "check_error_name_t": "The category name must not be empty.",
+    "check_error_exist_t": "The category name already exists."
+  },
+  "prompt_params_page": {
+    "parameters_l": "Parameters of the prompt",
+    "done_params_b": "Done",
+    "show_prompt_t": "show prompt"
+  }
+}
