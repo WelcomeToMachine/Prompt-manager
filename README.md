@@ -29,8 +29,9 @@ An IA prompt manager extension for Chrome
 Ps : If you have defined specific parameters in the clicked prompt, a dialog box will offer you to enter values ​​for the parameters.
 
 # Environnement of the project
-Vite + Vue 3.5 + TypeScript + Tailwindcss 4.0 + vue-i18n v10
 <br />
+Vite + Vue 3.5 + TypeScript + Tailwindcss 4.0 + vue-i18n v10
+
 ![vite](/logos/vite.logo.png)   
 ![vue](/logos/vue.logo.png)
 ![tailwindcss](/logos/tailwindcss.logo.png)
