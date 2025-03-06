@@ -31,6 +31,7 @@ Ps : If you have defined specific parameters in the clicked prompt, a dialog box
 # Environnement of the project
 Vite + Vue 3.5 + TypeScript + Tailwindcss 4.0 + vue-i18n v10
 <br />
+<br />
 ![vite](/logos/vite.logo.png)
 ![vue](/logos/vue.logo.png)
 ![tailwindcss](/logos/tailwindcss.logo.png)
