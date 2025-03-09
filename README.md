@@ -40,7 +40,7 @@ Vite + Vue 3.5 + TypeScript + Tailwindcss 4.0 + vue-i18n v10
 
 # Download and install
 
-This extension is available in the chrome store [here](https://...)
+This extension is available in the chrome store [here](https://chromewebstore.google.com/detail/prompt-manager/dablcijobkpaongfoohkfeojghldldbb)
 
 # Licence
 Check out the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html) to learn more.
