@@ -8,7 +8,7 @@
     "import_l": "Import",
     "import_b": "Importer",
     "import_modal_title_t": "Importer les prompts et les catégories ?",
-    "import_modal_text_t": "Cette opération va supprimer tous les prompts et catégories actuels. Cette opération est définitive.",
+    "import_modal_text_t": "Cette opération va supprimer tous les prompts et catégories actuels.\nCette opération est définitive.",
     "import_success_t": "Fait! Import réalisé avec succès.",
     "import_error_prefix": "Echec.",
     "import_error_format_global_t": "Format de données non valide : un objet avec des tableaux d'invites et de catégories était attendu.",

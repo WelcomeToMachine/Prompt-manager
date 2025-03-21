@@ -66,8 +66,12 @@ p {
     @apply rounded-lg py-1 pr-2 pl-2 mx-0.5 hover:bg-gray-200 dark:hover:bg-gray-500;
 }
 
+.my-category-elem-root {
+    @apply rounded-lg py-3 p-1 bg-gray-400 cursor-pointer peer-checked:bg-sky-500 peer-checked:font-bold peer-checked:text-white;
+}
+
 .my-category-elem {
-    @apply rounded-lg p-1 bg-gray-300 dark:bg-gray-500 cursor-pointer;
+    @apply rounded-lg p-1 bg-gray-300 dark:bg-gray-500 cursor-pointer peer-checked:bg-sky-500 peer-checked:font-bold peer-checked:text-white;
 }
 
 .my-category-elem-icon-bg {

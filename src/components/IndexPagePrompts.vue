@@ -3,17 +3,16 @@
   import { defineProps } from 'vue';
   import FilterIcon from './Icons/FilterIcon.vue';
   import { copyToClipboard } from '../scripts/utils.ts'
-  import { getPromptTextParams } from '../scripts/utils.ts'
-  import { replacePromptTextParams } from '../scripts/utils.ts'
+  import { getPromptTextParams } from '../scripts/prompts.ts'
+  import { replacePromptTextParams } from '../scripts/prompts.ts'
+  import { promptContainsParams } from '../scripts/prompts.ts'
+  import { prompts } from '../scripts/prompts.ts'
+  import type { Prompt } from '../scripts/prompts.ts'
   import { useI18n } from "vue-i18n";
   import type { PromptParamsPageResponse } from './PromptParamsPage.vue'
-  import { prompts } from '../scripts/prompts.ts'
   import { categories } from '../scripts/categories.ts'
   import { ROOT_CATEGORY_INDEX } from '../scripts/categories.ts'
-  import type { Prompt } from '../scripts/prompts.ts'
-
-  const PARAM_REGEX: string = "{{(.*?)}}";
-
+  
   const i18n = useI18n();
 
   const props = defineProps({
@@ -22,15 +21,15 @@
 
   const clickItem = (index: number, event: any) => {
     if (event) {
-      // to copy to clipboard only if the click is not on icons (edits or)
+      // to copy to clipboard only if the click is not on icons (edits or delete)
       if ((event.target.tagName !== 'svg') && (event.target.tagName !== 'SPAN') && (event.target.tagName !== 'path') ) {
-        const params = getPromptTextParams(PARAM_REGEX, prompts.getPrompts()[index].text, true);
-        if(params === null) {
+        if(promptContainsParams(prompts.getPrompts()[index].text)) {
+          const params = getPromptTextParams(prompts.getPrompts()[index].text, true);
+          showParamsPage(index, params);
+        }else{
           showClipboardIcon(index);
           copyToClipboard(prompts.getPrompts()[index].text);
-        }else{
-          showParamsPage(index, params);
-}
+        }
       }
     }
   }
@@ -97,7 +96,7 @@
 
   const paramsPageHandleOk = (response: PromptParamsPageResponse) => {
     hideParamsPage();
-    const paramsKeys = getPromptTextParams(PARAM_REGEX, prompts.getPrompts()[response.promptIndex].text, false);
+    const paramsKeys = getPromptTextParams(prompts.getPrompts()[response.promptIndex].text, false);
     if (paramsKeys) {
       copyToClipboard(replacePromptTextParams(prompts.getPrompts()[response.promptIndex].text, paramsKeys, response.paramsValues ));
     } else {
@@ -108,6 +107,10 @@
 
   const paramsPageHandleCancel = () => {
     hideParamsPage();
+  };
+
+  const showParamIcon = (promptText: string): Boolean => {
+    return promptContainsParams(promptText);
   };
 
 // ******************* ON MOUNTED *******************
@@ -149,10 +152,15 @@
           </div>
 
           <!-- PROMPT INFOS -->
-          <div class="flex-auto overflow-hidden gap-2 px-2">
+          <div class="flex-auto overflow-hidden gap-2 px-2" >
             <div class="w-full text-sm">
               <div class="my-text-gray font-bold select-none truncate">
-                {{ prompt.name }}
+                <div class="flex items-center space-x-1">
+                  <p>
+                    {{ prompt.name }}
+                  </p>
+                  <CircleIcon v-if="showParamIcon(prompt.text)" class="h-2 w-2 fill-gray-900 dark:fill-gray-200" />
+                </div>
               </div>
               <div class="my-text-gray text-sm px-2 select-none">
                 <p v-if="prompt.description === ''" class="truncate"><br /></p>
@@ -162,13 +170,13 @@
           </div>
 
           <!-- CONTEXT BUTTONS -->
-          <span class="group/edit invisible relative flex">
+          <span id="context-buttons" class="group/edit invisible relative flex">
             <router-link :to="{name: 'prompt', params: { id: index }}">
               <div class="group/edit invisible items-center group-hover/item:visible my-prompt-elem-icon-bg">
                 <EditIcon class="my-elem-icon"/>
               </div>
             </router-link>
-          <span  @click="showDeleteWrngModal(index)"
+            <span  @click="showDeleteWrngModal(index)"
               class="group/edit invisible items-center group-hover/item:visible my-prompt-elem-icon-bg">
               <DeleteIcon class="my-elem-icon"/>
             </span>

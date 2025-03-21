@@ -8,7 +8,7 @@
     "import_l": "Import",
     "import_b": "Import",
     "import_modal_title_t": "Import the prompts and categories?",
-    "import_modal_text_t": "This operation will delete all previous promtps and categories before. This operation is definitive.",
+    "import_modal_text_t": "This operation will delete all previous promtps and categories before.\nThis operation is definitive.",
     "import_success_t": "Done! Import completed successfully.",
     "import_error_prefix": "Failed.",
     "import_error_format_global_t": "Invalid data format: expecting an object with prompts and categories arrays.",

@@ -66,7 +66,7 @@
           <!-- the root category -->
           <div class="py-1">
             <input type="radio" name="option" id="-1" class="peer hidden" @click="clickItem(-1)" :checked="isRootCategorySelected === true"/> 
-            <label for="-1" class="group/item relative cursor-pointer flex items-center select-none bg-gray-400 justify-between rounded-lg py-3 p-1 peer-checked:bg-sky-500 peer-checked:font-bold peer-checked:text-white">
+            <label for="-1" class="group/item relative flex items-center select-none justify-between my-category-elem-root">
               <div class="flex overflow-hidden gap-2 px-2">
                 <div class="w-full text-sm font-bold truncate">
                   {{ $t('index_page.root_category_name_l') }}
@@ -80,7 +80,7 @@
           
             <input @click="clickItem(index)"
               type="radio" name="option" :id="String(index)" class="peer hidden"  />
-            <label :for="String(index)" class="group/item relative flex items-center select-none justify-between my-category-elem peer-checked:bg-sky-500 peer-checked:font-bold peer-checked:text-white">
+            <label :for="String(index)" class="group/item relative flex items-center select-none justify-between my-category-elem">
               <div class="flex overflow-hidden gap-2 px-2">
                 <div class="w-full my-text-gray text-sm truncate">
                     {{ category.name }}

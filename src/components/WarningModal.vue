@@ -28,7 +28,7 @@
                       {{ title }}
                     </p>
                   <div class="mt-2">
-                    <p class="text-sm text-red-500">
+                    <p class="text-sm text-red-500" style="white-space: pre-line">
                       {{ description }}
                     </p>
                   </div>

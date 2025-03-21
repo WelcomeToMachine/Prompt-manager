@@ -73,12 +73,10 @@ async function getCategoriesFromStorage()  {
     return categories
 }
 function setCategoriesToStorage(categories: Category[]) {
+    let sortedCategories: Category[] = categories;
+    sortedCategories.sort(sortByName);
     if (import.meta.env.DEV) {
-        let sortedCategories: Category[] = categories;
-        sortedCategories.sort(sortByName);
     }else{
-        let sortedCategories: Category[] = categories;
-        sortedCategories.sort(sortByName);
         chrome.storage.local.set({ categories: copyByValue(sortedCategories) });
     }
 }

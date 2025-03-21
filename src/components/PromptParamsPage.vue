@@ -54,7 +54,10 @@
       <div class="container mx-auto overflow-y-auto">
         <dl class="divide-y divide-gray-400 dark:divide-gray-400 text-sm">
           <div class="container">
-            <p class="my-field-label">{{ $t('prompt_params_page.parameters_l') }}</p>
+            <div class="flex items-center space-x-2 my-field-label">
+              <p> {{ $t('prompt_params_page.parameters_l') }}</p>
+              <CircleIcon class="h-2 w-2 fill-gray-900 dark:fill-gray-200" />              
+            </div>
             <div class="flex mb-2 items-center cursor-pointer" @click="toggleShowPrompt">
               <p class="px-2 text-left text-sm my-text-gray">{{ $t('prompt_params_page.show_prompt_t') }}</p>
               <div>
@@ -62,7 +65,7 @@
                 <TriangleIcon v-else class="h-3 w-3 fill-gray-800 dark:fill-gray-200 -rotate-90 translate-y-1" />
               </div>
             </div>
-            <p v-if="isPromptVisible" class="p-2 m-2 text-left text-sm my-text-gray italic bg-gray-100 dark:bg-gray-800 max-h-30 overflow-y-auto">
+            <p v-if="isPromptVisible" class="p-2 m-2 text-left text-sm my-text-gray italic bg-gray-100 dark:bg-gray-800 max-h-30 overflow-y-auto" style="white-space: pre-line">
                 {{ promptText }}
             </p>
           </div>
@@ -70,7 +73,7 @@
           <div>
             <div v-for="(parameter, index) in parameters">
               <p class="my-field-label after:ml-0.5">{{ parameter }}</p>    
-              <input type="text" :id="`param-${index}`" class="block w-full my-input" />
+              <textarea :id="`param-${index}`" rows="2" class="block w-full border my-text-area"></textarea>
             </div>
           </div>
         </dl>

@@ -23,6 +23,7 @@ import SelectorIcon from './components/Icons/SelectorIcon.vue';
 import NightIcon from './components/Icons/NightIcon.vue';
 import DayIcon from './components/Icons/DayIcon.vue';
 import TriangleIcon from './components/Icons/TriangleIcon.vue';
+import CircleIcon from './components/Icons/CircleIcon.vue';
 
 const router = createRouter({
     history: createMemoryHistory(),
@@ -53,6 +54,7 @@ app.component('SelectorIcon', SelectorIcon)
 app.component('NightIcon', NightIcon)
 app.component('DayIcon', DayIcon)
 app.component('TriangleIcon', TriangleIcon)
+app.component('CircleIcon', CircleIcon)
 
 // I18n 
 import { createI18n } from 'vue-i18n'

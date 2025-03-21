@@ -42,25 +42,3 @@ export const formatDate = (date: Date) => {
 export const replaceAll = (str: string, find: string, replace: string) => {
     return str.replace(new RegExp(find, 'g'), replace);
 }
-
-export const getPromptTextParams = (regexp: string, promptText: string, retrieveGroup: boolean) => {
-    let i: number = retrieveGroup ? 1 : 0;
-    const re = new RegExp(regexp,"g");
-    const arrayResult: string[] = [];
-    let match;
-    while ((match = re.exec(promptText)) !== null) {
-        arrayResult.push(match[i]);
-    }
-    const uniqueArrayResult = [...new Set(arrayResult)];
-    return uniqueArrayResult.length > 0 ? uniqueArrayResult : null;
-}
-
-export const replacePromptTextParams = (promptText: string, paramsKeys: string[], paramsValues: string[]) => {
-    let newText: string = promptText;
-    if (paramsKeys && paramsValues && paramsKeys.length === paramsValues.length) {
-        for (let i = 0; i < paramsKeys.length; i++) {
-            newText = replaceAll(newText, paramsKeys[i], paramsValues[i]);
-        }
-    }
-    return newText;
-};

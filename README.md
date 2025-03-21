@@ -1,5 +1,6 @@
 # Prompt Manager
-   
+[![GitHub release](https://img.shields.io/github/release/kapilratnani/JSON-Viewer.svg)](../../releases/latest)
+
 An IA prompt manager extension for Chrome
 
 # Features
@@ -8,7 +9,7 @@ An IA prompt manager extension for Chrome
 * Add/Edit/Delete a prompt (name, description, prompt text, category)
 * Filter a prompt by its name AND by a category
 * Copy the prompt text in the clipboard when you click on it
-* User can specify parameters in prompts. When the user clicks on the prompt and has defined parameters, the interface asks him to enter them before copying the prompt to the clipboard
+* User can specify parameters in prompts. When the user clicks on the prompt and has defined parameters, the interface asks him to enter them before copying the prompt to the clipboard. In the prompt list, if the prompt has parameters, a round icon appears next to the prompt name.
 
 ## Categories
 * Add/Edit/Delete a category

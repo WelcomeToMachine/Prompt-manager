@@ -15,8 +15,6 @@
 
   // ******************* ERASE MODAL *******************
   const isEraseWrngModalVisible = ref(false);
-  const eraseWrngModalTitleTxt = ref(i18n.t('settings_page.erase_modal_title_t'));
-  const eraseWrngModalDescTxt = ref(i18n.t('settings_page.erase_modal_text_t'));
 
   const showEraseWrngModal = () => {
     isEraseWrngModalVisible.value = true;
@@ -37,8 +35,6 @@
 
   // ******************* IMPORT MODAL *******************
   const isImportWrngModalVisible = ref(false);
-  const importWrngModalTitleTxt = ref(i18n.t('settings_page.import_modal_title_t'));
-  const importWrngModalDescTxt = ref(i18n.t('settings_page.import_modal_text_t'));
 
   let importFile: any
 
@@ -182,7 +178,7 @@
 
 <template>
 <!-- To debug the style, add this : style="border:1px solid black;" -->
-<div class="w-screen h-screen  p-4 my-bg-white">
+<div class="w-screen h-screen  p-4 my-bg-white transition-colors duration-500">
     <div class="container mx-auto">
       <dl class=" divide-y divide-gray-400 dark:divide-gray-400 text-sm">
 
@@ -251,10 +247,10 @@
           </div>
         </div>
         <!-- MODAL ERASE DIALOG -->
-        <WarningModal v-if="isEraseWrngModalVisible" :title="eraseWrngModalTitleTxt" :description="eraseWrngModalDescTxt" @ok="eraseWrngModalHandleOk" @cancel="eraseWrngModalHandleCancel" />
+        <WarningModal v-if="isEraseWrngModalVisible" :title="$t('settings_page.erase_modal_title_t')" :description="$t('settings_page.erase_modal_text_t')" @ok="eraseWrngModalHandleOk" @cancel="eraseWrngModalHandleCancel" />
 
         <!-- MODAL IMPORT DIALOG -->
-        <WarningModal v-if="isImportWrngModalVisible" :title="importWrngModalTitleTxt" :description="importWrngModalDescTxt" @ok="importWrngModalHandleOk" @cancel="importWrngModalHandleCancel" />
+        <WarningModal v-if="isImportWrngModalVisible" :title="$t('settings_page.import_modal_title_t')" :description="$t('settings_page.import_modal_text_t')" @ok="importWrngModalHandleOk" @cancel="importWrngModalHandleCancel" />
       </dl>
     <!-- BUTTONS -->
     <div class="flex flex-row-reverse space-x-4 space-x-reverse">
