@@ -1,5 +1,5 @@
 # Prompt Manager
-[![GitHub release](https://img.shields.io/github/release/kapilratnani/JSON-Viewer.svg)](../../releases/latest)
+[![GitHub release](https://img.shields.io/github/v/release/WelcomeToMachine/Prompt-manager.svg)](../../releases/latest)
 
 An IA prompt manager extension for Chrome
 
